@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-toggle {
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    border: none;
+    width: 171px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* .dropdown-toggle:hover {
+    background-color: #2770F1;
+  } */
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 4px 0;
+    width: 171px;
+  }
+
+  .dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  .block-1{
+    width: 767px;
+height: 456px;
+  }
+  .block-1 h1 {
+    font-family: Montserrat;
+font-size: 58px;
+font-weight: 800;
+line-height: 64px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+  }
+  .block-1 span {
+    font-family: Montserrat;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .two-btn{
+    margin-top: 36px;
+    gap: 17px;
+display: flex;
+  }
+  .two-btn button{
+font-size: 18px;
+font-weight: 600;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+    background-color: #F1F5FF;
+padding: 16px;
+border-radius: 6px;
+color: #2770F1;
+  }
+.two-btn button:hover{
+    background-color: #2770F1;
+    color: white;
+    border-radius: 6px;
+}
+.img-1{
+  position: absolute;
+  bottom: 90px;
+  right: 0px;
+  z-index: -1;
+}
+.img-2{
+  position: absolute;
+  bottom: 210px;
+  right: 935px;
+  z-index: -1;
+}
+.img-3{
+  position: absolute;
+  bottom: 90px;
+  right: 935px;
+  z-index: -1;
+}
+.img-4{
+  position: absolute;
+  right: 696px;
+  bottom: 210px;
+  z-index: -1;
+}
+.img-5{
+  position: absolute;
+  right: 895px;
+  bottom: 255px;
+  z-index: -2;
+}
+.section-3{
+  width: 1921px;
+  height: 839px;
+ margin: 0 auto;
+ background-color: #163063;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ position: relative;
+ gap: 300px;
+ flex-wrap: wrap;
+}
+.boss-Section3{
+  width: 1921px;
+  height: 56px;
+  margin-left: 126px;
+  border-left: 5px solid #2770F1;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.boss-Section4{
+  width: 1921px;
+  height: 56px;
+  margin-left: -164px;
+  border-left: 5px solid #2770F1;
+  padding-left: 20px;
+  margin-top:50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+#blockSection3{
+  width: 1115px;
+height: 448px;
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-top: -400px;
+}
+/*  */
+.container {
+  width: 1920px;
+height: 747px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 1850px;
+  height: 747px;
+  margin: 0  auto;
+  left: -150px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  height: auto;
+  margin: 0 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 20px;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.description h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.description p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
