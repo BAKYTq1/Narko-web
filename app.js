@@ -222,3 +222,115 @@ function moveCarousel(direction) {
     const offset = -currentIndex * imageWidth;
     track.style.transform = `translateX(${offset}px)`;
 }
+
+const section7 = document.querySelector('#section7')
+const info = [
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+  {
+    img:'./img/shutterstock_1637496319 2.png',
+  },
+]
+info.forEach((info) => {
+  const adddiv = document.createElement('div')
+  adddiv.innerHTML = `
+  <div>
+  <div class='w-[371.5px] h-[277px] '>
+  <img src='${info.img}' class='w-[371.5px] h-[277px]'>
+  </div>
+  </div>
+  `
+  section7.appendChild(adddiv)
+})
+const section8block = document.querySelector('#section8-bloks')
+const cards = [
+  {
+    img:'./img/Frame 85 (1).png',
+    pText:'Гарантируем на 100% результат после лечения',
+  },
+  {
+    img:'./img/Frame 85 (2).png',
+    pText:'Никто не узнает, кто мы и зачем приходили',
+  },
+  {
+    img:'./img/Frame 85 (3).png',
+    pText:'Проведем диагностику для исключения нежелательной реакции',
+  },
+  {
+    img:'./img/Frame 85.png',
+    pText:'Используем только качественные и проверенные препараты',
+  },
+]
+cards.forEach((info) => {
+  const dom = document.createElement('div')
+  dom.innerHTML = `
+  <div class='w-[359px] h-[212px] rounded-[4px] p-[24px] gap-[25px] hover:shadow-md'> 
+  <img src='${info.img}'>
+  <p>${info.pText}</p>
+  </div>
+  `;
+  section8block.appendChild(dom)
+})
+// 
+const slider = document.querySelector('.slider');
+const track = document.querySelector('.slider-track');
+
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = track.offsetLeft;
+    slider.style.cursor = 'grabbing';
+});
+
+slider.addEventListener('mouseleave', () => {
+    isDragging = false;
+    slider.style.cursor = 'grab';
+});
+
+slider.addEventListener('mouseup', () => {
+    isDragging = false;
+    slider.style.cursor = 'grab';
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = x - startX; // Distance dragged
+    track.style.transform = `translateX(${scrollLeft + walk}px)`;
+});
